@@ -1,0 +1,15 @@
+<a href='/'>Home</a>
+<a href='/sortbyvote/'>Sort by Votes</a> |
+<a href='/boast/'>Boasts</a> |
+<a href='/roast/'>Roasts</a> |
+<a href='/generic_form/'>Create Posts</a>
+
+{% for roasts in roast %} {% if not roasts.choices %}
+    <h2>Roast</h2>
+    <h3>{{roasts.user_post}}</h3>
+    {{ roasts.votes }}
+    <a href="/upvote/{{posts.id}}/">UPVOTE</a> <a href="/downvote/{{posts.id}}/">DOWNVOTE</a>
+    <br>
+    <h4>{{roasts.timeposted}}</h4>
+{% endif %}
+{% endfor %}

@@ -1,0 +1,11 @@
+<a href='/'>Home</a>
+<a href='/sortbyvote/'>Sort by Votes</a> |
+<a href='/boast/'>Boasts</a> |
+<a href='/roast/'>Roasts</a> |
+<a href='/generic_form/'>Create Posts</a>
+
+<form action="" method="post">
+    {% csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Ghostpost!">
+</form>
